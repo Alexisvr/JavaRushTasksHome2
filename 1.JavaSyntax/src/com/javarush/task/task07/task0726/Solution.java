@@ -17,10 +17,13 @@ public class Solution {
 
         while (true) {
             String name = reader.readLine();
-
             if (name.isEmpty()) break;
 
-            Cat cat = new Cat(name);
+            int age = Integer.parseInt(reader.readLine());
+            int weight = Integer.parseInt(reader.readLine());
+            int tailLength = Integer.parseInt(reader.readLine());
+
+            Cat cat = new Cat(name, age, weight, tailLength);
             CATS.add(cat);
         }
 
@@ -39,7 +42,7 @@ public class Solution {
         private int weight;
         private int tailLength;
 
-        Cat(String name) {
+        Cat(String name, int age, int weight, int tailLength) {
             this.name = name;
             this.age = age;
             this.weight = weight;
